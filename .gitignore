@@ -1,6 +1,0 @@
-#Exculde Everything
-*
-
-#Whitelist
-!src/*
-!res/*
