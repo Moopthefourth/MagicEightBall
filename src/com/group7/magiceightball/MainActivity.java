@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.TextView;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -52,7 +53,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         final View controlsView = findViewById(R.id.fullscreen_content_controls);
-        final View contentView = findViewById(R.id.fullscreen_content);
+        final View contentView = findViewById(R.id.M_eight_ball_content);
 
         // Set up an instance of SystemUiHider to control the system UI for
         // this activity.
@@ -111,7 +112,7 @@ public class MainActivity extends Activity {
         // Upon interacting with UI controls, delay any scheduled hide()
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
-        findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
+        findViewById(R.id.shake_ball_button).setOnTouchListener(mDelayHideTouchListener);
     }
 
     @Override
@@ -156,4 +157,46 @@ public class MainActivity extends Activity {
         mHideHandler.removeCallbacks(mHideRunnable);
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
     }
+    
+    //An array of all the possible answers
+    public final String[] eightBallAnswers = {"It is certain",
+    									"It is decidedly so",
+    									"Without a doubt",
+    									"Yes, Definitely",
+    									"You may rely on it",
+    									"As I see it yes",
+    									"Most likely",
+    								    "Outlook good",
+    									"Yes",
+    									"Signs point to yes",
+    									"Reply hazy, Try again",
+    									"Ask again later",
+    									"Better not tell you now",
+    									"Cannot predict now",
+    									"Concentrate and ask again",
+    									"Don't count on it",
+    									"My reply is no",
+    									"My sources say no",
+    									"Outlook not very good",
+    									"Very doubtful"
+    									};
+    //Picks a random statement and returns it
+    public String pickStatement()
+    {
+    	String newAnswer;
+        int answerNumber = (int)(Math.random()*20);
+        newAnswer = eightBallAnswers[answerNumber];
+    	return newAnswer;
+    }
+    
+    //Will change the eight ball text when the button is pressed
+    public void ShakeBallButtonClick(View v)
+    {
+    	//This method should pick a random statement out of the 20 provided 
+    	//that is not the current
+    	//And return the statement 
+    	TextView tv = (TextView)findViewById(R.id.M_eight_ball_content); 
+    	String newText = pickStatement();
+    	tv.setText(newText);
+    }   
 }
