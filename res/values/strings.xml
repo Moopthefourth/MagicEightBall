@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Magic Eight Ball</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="shake_ball_button">Shake It Up!</string>
+    <string name="eight_ball_content">Welcome</string>
 
 </resources>
