@@ -145,7 +145,6 @@ public class MainActivity extends Activity {
     Runnable mHideRunnable = new Runnable() {
         @Override
         public void run() {
-            mSystemUiHider.hide();
         }
     };
 
