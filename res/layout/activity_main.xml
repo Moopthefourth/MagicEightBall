@@ -1,4 +1,4 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,6 +11,14 @@
          TextureView, etc.
     -->
 
+         <ImageView
+         android:id="@+id/eight_ball_image"
+         android:layout_width="match_parent"
+    	 android:layout_height="match_parent"
+    	 android:scaleType="centerCrop"
+    	 android:src="@drawable/magic_eight_ball"
+    	 ></ImageView>
+         
     <TextView
         android:id="@+id/M_eight_ball_content"
         android:layout_width="match_parent"
@@ -18,9 +26,10 @@
         android:gravity="center"
         android:keepScreenOn="true"
         android:text="@string/eight_ball_content"
-        android:textColor="#33b5e5"
-        android:textSize="50sp"
+        android:textColor="#FFFFF0"
+        android:textSize="12sp"
         android:textStyle="bold" />
+
 
     <!--
          This FrameLayout insets its children based on system windows using
@@ -53,4 +62,4 @@
         </LinearLayout>
     </FrameLayout>
 
-</FrameLayout>
+</RelativeLayout>

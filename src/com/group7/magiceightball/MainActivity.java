@@ -4,12 +4,14 @@ import com.group7.magiceightball.util.SystemUiHider;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.ImageView;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -54,6 +56,9 @@ public class MainActivity extends Activity {
 
         final View controlsView = findViewById(R.id.fullscreen_content_controls);
         final View contentView = findViewById(R.id.M_eight_ball_content);
+        
+        
+        
 
         // Set up an instance of SystemUiHider to control the system UI for
         // this activity.
@@ -145,7 +150,7 @@ public class MainActivity extends Activity {
     Runnable mHideRunnable = new Runnable() {
         @Override
         public void run() {
-            mSystemUiHider.hide();
+           //mSystemUiHider.hide();
         }
     };
 
