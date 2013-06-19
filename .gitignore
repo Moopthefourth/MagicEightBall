@@ -1,0 +1,7 @@
+#Exculde Everything
+*
+
+#Whitelist
+!src/
+!res/
+!.gitignore
