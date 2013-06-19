@@ -1,7 +1,3 @@
-#Exculde Everything
-*
-
-#Whitelist
-!src/.
-!res/.
-!.gitignore
+bin/
+gen/
+.DS_Store
