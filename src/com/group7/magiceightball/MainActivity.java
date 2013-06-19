@@ -4,6 +4,7 @@ import com.group7.magiceightball.util.SystemUiHider;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -106,8 +107,6 @@ public class MainActivity extends Activity {
             public void onClick(View view) {
                 if (TOGGLE_ON_CLICK) {
                     mSystemUiHider.toggle();
-                } else {
-                    mSystemUiHider.show();
                 }
             }
         });
@@ -200,6 +199,8 @@ public class MainActivity extends Activity {
     	//And return the statement 
     	TextView tv = (TextView)findViewById(R.id.M_eight_ball_content); 
     	String newText = pickStatement();
+    	MediaPlayer mp = MediaPlayer.create(getBaseContext(),R.raw.shaking_sound);
+    	mp.start();
     	tv.setText(newText);
     }   
 }
